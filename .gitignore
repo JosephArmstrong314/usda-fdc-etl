@@ -1,0 +1,16 @@
+# Data Folders
+
+/data
+/splitData
+/newData
+
+# Packages
+
+/node_modules
+package-lock.json
+package.json
+
+# .json and .jsonl files
+
+*.json
+*.jsonl
