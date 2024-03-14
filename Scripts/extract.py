@@ -62,19 +62,5 @@ def getBrandedFoodsData():
     with jsonlines.open(filePath, 'w') as sampleFile:
         sampleFile.write_all(extractedData)
 
-"""
-def getSampleBrandedFoodsDataEnd():
-    data_filePath = 'Data/RawData/brandedDownload.json'
-
-    with open(data_filePath, 'r') as dataFile:
-        saveline = dataFile.readline()
-
-        while(True):
-            line = dataFile.readline()
-            if (line == ""):
-                break
-            saveline = line
-"""
-
 if __name__ == "__main__":
     getBrandedFoodsData()
