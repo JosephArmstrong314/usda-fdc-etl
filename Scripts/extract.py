@@ -62,5 +62,40 @@ def getBrandedFoodsData():
     with jsonlines.open(filePath, 'w') as sampleFile:
         sampleFile.write_all(extractedData)
 
+def numBrandOwners():
+    data_filePath = 'Data/FinalData/brandedData.jsonl'
+
+    brandOwners = set()
+    num = 0
+
+    with open(data_filePath, encoding='utf-8', mode='r') as dataFile:
+        start = dataFile.readline() # first line contains no information
+        endFlag = False
+        saveLine = dataFile.readline()
+        count = 0
+
+        while(True):
+            try:
+                nextLine = dataFile.readline()
+                if (nextLine == ""): endFlag = True
+                line = saveLine
+                saveLine = nextLine
+
+                food = json.loads(line)
+
+                count += 1
+
+                if (food['brandOwner'] in brandOwners):
+                    continue
+                else:
+                    num += 1
+                    brandOwners.add(food['brandOwner'])
+
+                print(f"count: {count} and {num}")
+
+                if(endFlag): break
+            except:
+                continue
+
 if __name__ == "__main__":
-    getBrandedFoodsData()
+    numBrandOwners()
