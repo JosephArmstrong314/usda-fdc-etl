@@ -1,13 +1,19 @@
+"""
+Author: Joseph Armstrong
+
+"""
+
 import json
 import jsonlines
 
-def getBrandedFoodsData():
-    data_filePath = 'Data/RawData/brandedDownload.json'
-    filePath = 'Data/FinalData/brandedData.jsonl'
+DATA_INPUT_FILE = "branded_download.json"
+DATA_OUTPUT_FILE = "branded_data.jsonl"
 
-    extractedData = []
+def extract_data():
 
-    with open(data_filePath, 'r') as dataFile:
+    extracted_data = []
+
+    with open(DATA_INPUT_FILE, 'r') as dataFile:
         start = dataFile.readline() # first line contains no information
         endFlag = False
         saveLine = dataFile.readline()
@@ -52,23 +58,22 @@ def getBrandedFoodsData():
                 else:
                     foodData.update({k2: -1})
 
-            extractedData.append(foodData)
+            extracted_data.append(foodData)
             count += 1
             if (count % 100 == 0):
                 print(f'count: {count}')
 
             if(endFlag): break
         
-    with jsonlines.open(filePath, 'w') as sampleFile:
-        sampleFile.write_all(extractedData)
+    with jsonlines.open(DATA_OUTPUT_FILE, 'w') as sampleFile:
+        sampleFile.write_all(extracted_data)
 
 def numBrandOwners():
-    data_filePath = 'Data/FinalData/brandedData.jsonl'
 
     brandOwners = set()
     num = 0
 
-    with open(data_filePath, encoding='utf-8', mode='r') as dataFile:
+    with open(DATA_OUTPUT_FILE, encoding='utf-8', mode='r') as dataFile:
         start = dataFile.readline() # first line contains no information
         endFlag = False
         saveLine = dataFile.readline()

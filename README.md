@@ -8,13 +8,14 @@ This project was part of a submission to the [Convex 2024 Hackathon](https://con
 
 <a name="table-of-contents"/>
 
-## Table of Contents 
-[Introduction](#introduction)   
-[Table of Contents](#table-of-contents)   
-[Project Description](#project-description)   
-[Usage](#usage)   
-[Credits](#credits)   
-[Other](#other)   
+## Table of Contents
+
+[Introduction](#introduction)  
+[Table of Contents](#table-of-contents)  
+[Project Description](#project-description)  
+[Usage](#usage)  
+[Credits](#credits)  
+[Other](#other)
 
 <a name="project-description"/>
 
@@ -29,35 +30,37 @@ This project includes an `explore.py` script to show how the data was explored a
 ## Usage
 
 Requirements:
+
 - `Python 3.X`
 - USDA FDC JSON data
 
 Instructions:
+
 - Fork this repo
 - Load the USDA FDC JSON data into the project
 - Name the data file `branded_download.json`
 - Run `python3 explore.py` to see how we explored the data
-- Run `python3 extract.py` to produce a `branded_download_cleaned.jsonl` file
+- Run `python3 extract.py` to produce a `branded_data.jsonl` file
 
 <a name="credits"/>
 
 ## Credits
 
-Author: Joseph Armstrong   
-[GitHub](https://github.com/JosephArmstrong314)   
-[LinkedIn](https://www.linkedin.com/in/joseph-armstrong-31415926535897932384626/)   
-[DevPost](https://devpost.com/joeagorn)   
+Author: Joseph Armstrong  
+[GitHub](https://github.com/JosephArmstrong314)  
+[LinkedIn](https://www.linkedin.com/in/joseph-armstrong-31415926535897932384626/)  
+[DevPost](https://devpost.com/joeagorn)
 
 <a name="other"/>
 
 ## Other
 
-| Important Links | 
-|---|
-| [ETL GitHub Repo](https://github.com/JosephArmstrong314/usda-fdc-etl) | 
-| [Front End GitHub Repo](https://github.com/mashiourcse/convex_nutriiton) | 
-| [USDA FDC Data](https://fdc.nal.usda.gov/) | 
-| [DevPost Submission](https://devpost.com/software/nutrition-tool-using-usda-dataset) | 
-| [Convex Website](https://www.convex.dev/) | 
-| [Convex 2024 Hackathon](https://convexhackathon.devpost.com/) |
+| Important Links                                                                                              |
+| ------------------------------------------------------------------------------------------------------------ |
+| [ETL GitHub Repo](https://github.com/JosephArmstrong314/usda-fdc-etl)                                        |
+| [Front End GitHub Repo](https://github.com/mashiourcse/convex_nutriiton)                                     |
+| [USDA FDC Data](https://fdc.nal.usda.gov/)                                                                   |
+| [DevPost Submission](https://devpost.com/software/nutrition-tool-using-usda-dataset)                         |
+| [Convex Website](https://www.convex.dev/)                                                                    |
+| [Convex 2024 Hackathon](https://convexhackathon.devpost.com/)                                                |
 | [Convex CLI Import Documentation](https://docs.convex.dev/database/import-export/import#single-table-import) |

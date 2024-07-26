@@ -1,9 +1,14 @@
-# Data Folders
+# Data
 
-/Data
+branded_download.json
+branded_data.jsonl
 
 # Packages
 
 /node_modules
 package-lock.json
 package.json
+
+# Other
+
+explore.py
